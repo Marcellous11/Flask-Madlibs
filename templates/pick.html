@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+<style>
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        height: 100vh;
+        background-color: #f1f1f1;
+    }
+
+    input {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+</style>
+{% block title%} Pick a Stroy {% endblock%}
+
+{%block content%}
+<form action="/stories">
+    <label for="lang">Story options</label>
+    <select name="story_type" id="lang">
+        <option>Far Away</option>
+        <option>Space adenvture</option>
+        <option>Deep Jungle</option>
+        <option>Under the Sea</option>
+        <option>Middle Earth</option>
+        <option>10 Millions Years Ago</option>
+    </select>
+    <input type="submit" value="Submit" />
+</form>
+{%endblock%}
+{%block sub%} {%endblock%}

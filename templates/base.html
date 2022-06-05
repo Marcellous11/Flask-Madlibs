@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Account registration form</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet'
+        type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="/static/app.css">
+
+</head>
+
+<body>
+    <h1> {%block head %}{% endblock%}</h1>
+    <div class="main-block">
+        {%block content%}
+        <form action="/stories">
+            <h1>{% block title%} Madlib {%endblock%}</h1>
+            <fieldset>
+                <legend>
+                    <h3>Story Details</h3>
+                </legend>
+                <div class="personal-details">
+                    <div>
+                        <div><label>place</label><input type="text" name="place" required></div>
+                        <div><label>noun</label><input type="text" name="noun" required></div>
+                        <div><label>verb</label><input type="text" name="verb"></div>
+                        <div><label>adjective</label><input type="text" name="adjective" required></div>
+                        <div><label>plural_noun</label><input type="text" name="plural_noun"></div>
+                    </div>
+                </div>
+            </fieldset>
+
+            {%block sub%} <button type="submit" href="/stories">Submit</button> {%endblock%}
+        </form>
+        {%endblock%}
+    </div>
+</body>
+
+</html>
